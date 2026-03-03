@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promo</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1080px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  .card {
+    width: 960px;
+    height: 960px;
+    border-radius: 32px;
+    background: linear-gradient(145deg, #1a1a2e, #16213e, #0f3460);
+    border: 2px solid rgba(255,255,255,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 70px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Decoracion fondo */
+  .card::before {
+    content: '';
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,212,120,0.15), transparent 70%);
+  }
+  .card::after {
+    content: '';
+    position: absolute;
+    bottom: -150px; left: -150px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(99,102,241,0.2), transparent 70%);
+  }
+
+  /* TOP */
+  .top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  .badge {
+    background: linear-gradient(135deg, #00d478, #00b860);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border-radius: 50px;
+  }
+  .price-old {
+    text-align: right;
+  }
+  .price-old span {
+    display: block;
+    color: rgba(255,255,255,0.35);
+    font-size: 18px;
+    text-decoration: line-through;
+  }
+  .price-new {
+    color: #00d478;
+    font-size: 36px;
+    font-weight: 900;
+  }
+
+  /* CENTRO */
+  .center {
+    text-align: center;
+    z-index: 1;
+  }
+  .emoji-big {
+    font-size: 90px;
+    margin-bottom: 20px;
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(0,212,120,0.5));
+  }
+  h1 {
+    color: #ffffff;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  }
+  h1 span {
+    color: #00d478;
+  }
+  .sub {
+    color: rgba(255,255,255,0.55);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  /* FEATURES */
+  .features {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .feat {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 16px 24px;
+    color: #fff;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .feat .icon { font-size: 22px; }
+
+  /* PARA QUIEN */
+  .for-who {
+    z-index: 1;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: center;
+  }
+  .tag {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50px;
+    color: rgba(255,255,255,0.75);
+    font-size: 16px;
+    padding: 10px 22px;
+  }
+
+  /* BOTTOM */
+  .bottom {
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cta {
+    background: linear-gradient(135deg, #00d478, #00b860);
+    color: #fff;
+    font-size: 22px;
+    font-weight: 800;
+    padding: 20px 48px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 30px rgba(0,212,120,0.4);
+  }
+  .no-need {
+    text-align: right;
+  }
+  .no-need p {
+    color: rgba(255,255,255,0.5);
+    font-size: 15px;
+    line-height: 2;
+  }
+  .no-need p::before {
+    content: '✓  ';
+    color: #00d478;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="top">
+    <div class="badge">🔥 Oferta de lanzamiento</div>
+    <div class="price-old">
+      <span>Antes $50.000</span>
+      <div class="price-new">Hoy $15.000</div>
+    </div>
+  </div>
+
+  <div class="center">
+    <span class="emoji-big">📊</span>
+    <h1>Controla tu negocio<br><span>sin complicaciones</span></h1>
+    <p class="sub">Planilla lista para tiendas, bodegas y restaurantes</p>
+
+    <div class="features">
+      <div class="feat"><span class="icon">⚡</span> Funciona al instante</div>
+      <div class="feat"><span class="icon">📱</span> Celular o PC</div>
+      <div class="feat"><span class="icon">💾</span> Guarda tus datos</div>
+      <div class="feat"><span class="icon">📄</span> Exporta a Excel</div>
+    </div>
+  </div>
+
+  <div class="for-who">
+    <span style="color:rgba(255,255,255,0.4); font-size:15px;">Ideal para:</span>
+    <div class="tag">🛒 Tiendas</div>
+    <div class="tag">📦 Bodegas</div>
+    <div class="tag">🍽️ Restaurantes</div>
+    <div class="tag">💼 Negocios propios</div>
+  </div>
+
+  <div class="bottom">
+    <div class="cta">Escribeme y te la envio hoy</div>
+    <div class="no-need">
+      <p>Sin instalaciones</p>
+      <p>Sin suscripcion mensual</p>
+      <p>Sin internet</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
